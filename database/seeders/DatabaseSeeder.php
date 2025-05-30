@@ -13,7 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Hapus dulu User factory bawaan kalau mau pakai seeder manual
         // User::factory(10)->create();
 
         User::factory()->create([
@@ -21,10 +20,8 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        // Daftarkan seeder tambahan di bawah ini
         $this->call([
             UsersTableSeeder::class,
-            // Kalau ada seeder lain bisa ditambahkan di sini juga
         ]);
     }
 }

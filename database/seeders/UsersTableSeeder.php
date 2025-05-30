@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
         User::create([
             'name' => 'Admin',
             'email' => 'admin@database.com',
-            'password' => Hash::make('123'), // password terenkripsi
+            'password' => Hash::make('123'),
         ]);
     }
 }

@@ -12,13 +12,11 @@ class Order extends Model
 
     protected $fillable = ['order_id', 'customer_id', 'order_date', 'total_amount', 'status'];
 
-    // Relasi order milik satu customer
     public function customer()
     {
         return $this->belongsTo(Customer::class, 'customer_id', 'customer_id');
     }
 
-    // Relasi order punya banyak order items
     public function orderItems()
     {
         return $this->hasMany(OrderItem::class, 'order_id', 'order_id');
