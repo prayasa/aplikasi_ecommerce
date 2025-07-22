@@ -16,5 +16,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UsersTableSeeder::class, // Pastikan nama kelasnya benar
         ]);
+
+        // Panggil seeder kategori terlebih dahulu
+        $this->call(CategoriesTableSeeder::class);
+
+        // Kemudian panggil seeder produk
+        $this->call(ProductsTableSeeder::class);
     }
 }
